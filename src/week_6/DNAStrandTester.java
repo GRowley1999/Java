@@ -1,0 +1,23 @@
+package week_6;
+
+public class DNAStrandTester {
+	
+	public static void summarise(DNAStrand dna) {
+	    System.out.println("Original DNA Sequence: " + dna);
+	    if (dna.isValidDNA()) {
+	        System.out.println("Is valid");
+	        System.out.println("Complement: " + dna.complementWC());
+	        System.out.println("WC Palindrome: " + dna.palindromeWC());
+	    } 
+	    else {
+	        System.out.println("Not Valid DNA");
+	    }
+	}
+	
+	public static void main(String[] args) {
+		DNAStrand dnaStrand1 = new DNAStrand("ACGGTC");
+		DNAStrand dnaStrand2 = new DNAStrand("TGCCAG");
+		summarise(dnaStrand1);
+		summarise(dnaStrand2);
+	}
+}
